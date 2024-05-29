@@ -6,3 +6,5 @@
 2024-05-29T10:33:28.682Z info: Received a POST request for /api/v1/auth/signup
 2024-05-29T10:33:42.656Z info: Received a POST request for /api/v1/auth/signin
 2024-05-29T10:34:35.211Z info: Berhasil terhubung ke database mongoDB
+2024-05-29T10:36:11.322Z info: Berhasil terhubung ke database mongoDB
+2024-05-29T10:40:11.154Z info: Berhasil terhubung ke database mongoDB
