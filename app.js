@@ -1,7 +1,5 @@
-
 const cors = require("cors");
 const express = require("express");
-const { Logging } = require("./libs/lib.logging");
 const playerRouter = require("./app/player/router");
 const authRouter = require("./app/auth/router");
 const { MongoDBConnection } = require("./libs/lib.database");
@@ -13,15 +11,10 @@ MongoDBConnection();
 
 app.use(express.json());
 
-
 /**
  * Logging app
  */
-app.use((req, res, next) => {
-  // Log an info message for each incoming request
-  Logging.info(`Received a ${req.method} request for ${req.url}`);
-  return next();
-});
+
 //api
 app.use(`${URL}/players`, playerRouter);
 app.use(`${URL}/auth`, authRouter);
