@@ -6,11 +6,6 @@ const playerRouter = require("./app/player/router");
 const authRouter = require("./app/auth/router");
 const { MongoDBConnection } = require("./libs/lib.database");
 const URL = `/api/v1`;
-const corsConfig = {
-  origin: "*",
-  credential: true,
-  methods: ["GET", "POST", "PUT", "DELETE"],
-};
 
 const app = express();
 
@@ -18,8 +13,7 @@ MongoDBConnection();
 
 app.use(express.json());
 
-app.use(cors(corsConfig));
-app.options("", cors(corsConfig));
+
 /**
  * Logging app
  */
